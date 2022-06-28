@@ -1,0 +1,35 @@
+.mainh1 {
+   
+  color: white;
+  text-shadow:
+    0 1px #808d93,
+    -1px 0 #cdd2d5,
+    -1px 2px #808d93,
+    -2px 1px #cdd2d5,
+    -2px 3px #808d93,
+    -3px 2px #cdd2d5,
+    -3px 4px #808d93,
+    -4px 3px #cdd2d5;
+    
+}
+
+
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    padding: 0;
+    display: block;
+    margin: 0 auto;
+    /*max-height: 90%;*/
+    /*max-width: 90%;*/
+}
+
+img.resultimg {
+    max-height: 90%;
+    max-width: 90%;
+}

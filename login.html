@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Zed Beds</title>
+
+			<!-- links 
+				Jquery Mobile CSS **   ** 3 make jquery mobile framework
+				Jquery Lib ** 
+				Jquery Mobile Library ** 
+				MY CSS
+				MY JS.   
+				in that order to be linked
+
+				use CDN live links to above 
+
+				 -->
+				 <meta charset="utf-8">
+				 <meta name="viewport" content ="width=device-width, initial-scale=1">
+				<link rel="stylesheet" href="themes/mytheme.min.css">
+				<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css">
+
+				<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css">
+
+				<!-- JQM CSS  --> 
+
+				<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+				<!-- JQUERY Lib -->
+
+
+				<script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
+
+				<!-- JQM Lib -->
+
+				<link rel="stylesheet" type="text/css" href="css/hotelmap.css">
+				<link rel="stylesheet" type="text/css" href="css/styles.css">
+
+				<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script> 
+				<!-- google maps api -->
+				<script src="js/propertymap.js"></script>				
+				<script type="text/javascript" src="js/config.js"></script>
+
+				<script src="js/addfav.js"></script>
+				<script src="js/getfav.js"></script>
+
+					
+	</head>
+	<body>
+		<!-- Home page / Index Page -->
+		<div data-role = "page" id="login" data-theme="c">
+			<!--  nav panel top of page -->
+			<div data-role="panel" id="navpanel" data-display="overlay" data-position-fixed="true">
+				<div id ="navcontainer">
+					<ul data-role="listview">
+						<li><a href="index.html" class="ui-btn ui-icon-home ui-btn-icon-right">Home</a></li>
+						<li><a href="favourites.html" class="ui-icon-star">Favourites</a></li>
+						<li><a href="login.html">Login</a></li>
+						<li><a href="register.html">Register</a></li>
+					</ul>
+				</div>
+			
+			</div>   <!-- closes navpanel -->
+
+
+
+
+			<div data-role ="header" data-position="fixed">
+
+			 <a href="#navpanel" class="ui-btn ui-corner-all ui-icon-bars ui-btn-icon-notext ui-btn-right"></a>
+
+			 <a href="#" data-rel="back" data-transition="slidefade" data-direction="reverse" class="ui-btn ui-icon-back ui-btn-icon-notext ui-corner-all ui-btn-left">No text</a> 
+			<h1 class="mainh1">Zed Beds</h1>
+
+			</div>
+
+			<div data-role="content">
+				<h3>Login</h3>
+				<form>
+			
+				     <input type="text" required data-clear-btn="false" name="user-1" id="user-1" value="" autocomplete="off" placeholder="Username">
+				
+				     <input type="password" required data-clear-btn="true" name="password-2" id="password-2" value="" autocomplete="off" placeholder="Password">
+				
+				<input type="submit" class="ui-btn"  value="Login">
+
+				</form>
+								
+ 				<div>
+					 <p>Not yet a member?</p>
+					 <a href="register.html" class="ui-btn ui-corner-all ui-shadow" data-transition="slideup">Register</a>
+				 </div>	
+					
+			</div> <!-- closes data role = content -->	
+
+				<div data-role ="footer" data-position ="fixed">
+				<div data-role="navbar" data-id="footernav">
+					<ul>
+						<li><a href="about.html" data-icon="info" data-transition="slidefade">About</a></li>
+						<li><a href="contact.html" data-icon="mail" data-transition="slidefade">Contact</a></li>
+						<li><a href="login.html" data-icon="user" data-transition="slidefade" class="ui-state-persist ui-btn-active">Login</a></li>
+					</ul>
+				</div>
+			</div> <!-- closes footer -->
+		</div> <!-- closes page login -->
+
+
+
+			
+		
+
+	</body>
+</html>
+
+
+

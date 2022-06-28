@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Zed Beds</title>
+			<!-- links 
+				Jquery Mobile CSS **   ** 3 make jquery mobile framework
+				Jquery Lib ** 
+				Jquery Mobile Library ** 
+				MY CSS
+				MY JS.   
+				in that order to be linked
+
+				use CDN live links to above 
+
+				 -->
+				 <meta charset="utf-8">
+				 <meta name="viewport" content ="width=device-width, initial-scale=1">
+				<link rel="stylesheet" href="themes/mytheme.min.css">
+				<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css">
+
+				<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css">
+
+				<!-- JQM CSS  --> 
+
+				<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+				<!-- JQUERY Lib -->
+
+
+				<script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
+
+				<!-- JQM Lib -->
+
+				<link rel="stylesheet" type="text/css" href="css/hotelmap.css">
+				<link rel="stylesheet" type="text/css" href="css/styles.css">
+
+				<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script> 
+				<!-- google maps api -->
+				<script src="js/propertymap.js"></script>				
+				<script type="text/javascript" src="js/config.js"></script>
+
+				<script src="js/addfav.js"></script>
+				<script src="js/getfav.js"></script>
+
+					
+	</head>
+	<body>
+		<!-- Home page / Index Page -->
+		<div data-role = "page" id="home" data-theme="c">
+			<!--  nav panel top of page -->
+			<div data-role="panel" id="navpanelhome" data-display="overlay" data-position-fixed="true">
+				<div id ="navcontainer">
+					<ul data-role="listview">
+						<li><a href="index.html" class="ui-btn ui-icon-home ui-btn-icon-right">Home</a></li>
+						<li><a href="favourites.html" class="ui-icon-star">Favourites</a></li>
+						<li><a href="login.html">Login</a></li>
+						<li><a href="register.html">Register</a></li>
+					</ul>
+				</div>
+			
+			</div>   <!-- closes navpanel -->
+
+
+
+
+			<div data-role ="header">
+			 <a href="#navpanelhome" class="ui-btn ui-corner-all ui-icon-bars ui-btn-icon-notext ui-btn-right"></a>
+
+			 <!-- <a href="#" data-icon="back" data-transition="slidefade" data-direction="reverse" class="ui-btn ui-icon-back ui-btn-icon-notext ui-corner-all ui-btn-left">Back</a>  -->
+				<h1 class="mainh1">Zed Beds</h1>
+			</div>
+
+			<div data-role="content">
+				<p>Welcome. We are here to help you find accomdation for your studies at university, please browse the site or get in touch if you need our services</p>
+					<ul data-role="listview" data-inset="true"> 
+						<li><a href="results.html" data-transition="flip">Top Rated</a></li>
+
+						</ul>
+
+					<!-- introducing collapsable list view sets adopted from the examples shown at demos.jquerymobile.com -->
+					<!-- <form action="login.html"> trying to wrap all in form so the button is connected and working properly.	 -->
+					<div data-role="collapsibleset" data-theme="d" data-content-theme="a">
+
+							<div data-role = "collapsible">
+							<h2>Price</h2>  <!-- this bit is the bit that drops down to reveal more -->
+							<!-- <ul data-role="listview"> -->
+								<!-- <li><a href="index.html">Price</a></li> -->
+								<!-- adding a slider bar for user to chose price -->
+								<label for="slider">Input Price</label>
+								<input type="range" name="slider" id="slider" value="0" min="0" max="700" step="10" />
+								
+
+							<!-- </ul>  -->
+						</div> <!-- closes first collapsible set  -->
+			<!-- second  -->
+						<div data-role = "collapsible">
+							<h2>Location</h2>  <!-- this bit is the bit that drops down to reveal more -->
+							<!-- <ul data-role="listview"> -->
+								<!-- <label for="search-2">Search Input:</label> -->
+								<input type="search" name="search" id="search" value="" placeholder="Post Code">
+
+							<!-- </ul>  -->
+						</div> <!-- closes second collapsible set  -->
+
+						<div data-role = "collapsible" data-collapsed="true">
+							<h2>Type</h2>  <!-- this bit is the bit that drops down to reveal more -->
+							<!-- <ul data-role="listview"> -->
+								<form>
+									<fieldset data-role="controlgroup" data-type="horizontal">
+										<!-- <legend>Type of Accomodation:</legend> -->
+										<input type="checkbox" name="checkbox-h-2a" id="checkbox-h-2a">
+										<label for="checkbox-h-2a">House Share</label>										
+										<input type="checkbox" name="checkbox-h-2b" id="checkbox-h-2b">
+										<label for="checkbox-h-2b">Flat</label>	
+
+										<input type="checkbox" name="checkbox-h-2c" id="checkbox-h-2c">
+										<label for="checkbox-h-2c">Studio</label>
+									</fieldset>
+								</form>
+
+								
+							<!-- </ul> 	 -->
+				</div>	<!-- closes the set -->
+			</div> <!-- Closes collapsible set right after content role  -->
+		
+			
+				<a href="results.html" class="ui-btn ui-corner-all ui-shadow">Submit</a>	
+				
+			</div> <!-- closes data role = content -->	
+
+			<div data-role ="footer" data-position ="fixed">
+				<div data-role="navbar" data-id="footernav">
+					<ul>
+						<li><a href="about.html" data-icon="info" data-transition="slidefade" data-prefetch>About</a></li>
+						<li><a href="contact.html" data-icon="mail" data-transition="slidefade" data-prefetch>Contact</a></li>
+						<li><a href="login.html" data-icon="user" data-transition="slidefade" data-prefetch>Login</a></li>
+					</ul>
+				</div>
+			</div> <!-- closes footer -->
+		</div> <!-- closes page -->
+
+
+				<!-- start of top rated page --> 
+
+		<!-- <div data-role ="page" id="toprated" data-theme="c">
+			<div data-role="panel" id="navpanelhome2" data-display="overlay" data-position-fixed="true">
+				<div id ="navcontainer2">
+					<ul data-role="listview">
+						<li><a href="index.html" class="ui-btn ui-icon-home ui-btn-icon-right">Home</a></li>
+						<li><a href="#">External</a></li>
+						<li><a href="#">FAQ</a></li>
+						<li><a href="#">Amenities</a></li>
+					</ul>
+				</div>
+			
+			</div>   <!-- closes navpanel -->			 	
+
+			 	<!-- <!-- <div data-role="header">
+			 		<a href="#navpanelhome2" class="ui-btn ui-corner-all ui-icon-bars ui-btn-icon-notext ui-btn-right"></a>
+
+					<a href="#" data-rel="back" data-transition="slidefade" data-direction="reverse" class="ui-btn ui-icon-back ui-btn-icon-notext ui-corner-all ui-btn-left">No text</a> 				
+			 		<h1>Zed Beds</h1> 
+			 	</div>
+
+			 	<div data-role="content">
+
+					<h2>Properties Images and info soon</h2>
+					<ul data-role="listview" data-inset="true" class="ui-listview ui-listview-inset">
+					<li>
+						<a href="flat.html">
+							<!-- test favourites -->
+						<!-- 	<h3>Studio Flat</h3>
+							<img src="img/property1.jpg" height="75" alt="img"><br>
+							<h4>£480 per month</h4>
+							<p>182 Blink Street<br>London EC2A 2EF</p>
+						</a>
+					</li>					
+					<li>
+						<a href="house.html">
+							<h3>Shared House</h3>
+							<img src="img/property2.jpg" height="75" alt="img"><br>
+							<h4>£580 per month</h4>
+							<p>43 Gower Street<br>London WC1E 2EF</p>
+						</a>
+					</li> -->					
+			<!-- 		<li>
+						<a href="room.html">
+							<h3>Bed Room</h3>
+							<img src="img/property3.jpg" height="75" alt="img"><br>
+							<h4>£440 per month</h4>
+							<p>53 Flower Street<br>London WC1E 2EE</p>
+						</a>
+					</li> -->
+				<!-- </ul> 		closes ul list view for properties
+			 	</div> -->		 <!-- closes content -->
+
+				<!-- <div data-role ="footer" data-position ="fixed"> -->
+				<!-- <div data-role="navbar" data-id="footernav">
+					<ul>
+						<li><a href="about.html" data-icon="info" data-transition="slidefade">About</a></li>
+						<li><a href="contact.html" data-icon="mail" data-transition="slidefade">Contact</a></li>
+						<li><a href="login.html" data-icon="user" data-transition="slidefade">Login</a></li>
+					</ul>
+				</div> -->
+	<!-- 		</div> closes footer
+
+			 </div>	 --> 	<!-- end of top rated page --> 
+
+	</body>
+</html>
